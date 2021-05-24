@@ -1,0 +1,9 @@
+.maindiv{
+    padding: 2em ;
+}
+.search-bar{
+    max-width: 600px;
+    /* how big should searchbar be?
+        may need to do some break points
+    */
+}
