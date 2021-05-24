@@ -1,27 +1,6 @@
 # Schlarb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Geordin can you add this to the list : Schlarb is a music app where users can save their favorite musicians and receive updates when they are going to be performing live at one of their selected venues. Users will have their own profile where they can update their bio, like other lists, see other lists, and save their favorite artists to a list and see where they are performing.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Tech Stack:
+Java, Angular, Spring, HTML, CSS, PostgreSQL, JUnit, Mockito, S3, RDS, EC2, Jacoco, Jenkins, Gradle, JPA, Hibernate
