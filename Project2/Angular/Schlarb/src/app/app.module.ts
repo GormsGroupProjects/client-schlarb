@@ -8,6 +8,7 @@ import { SearchviewComponent } from './searchview/searchview.component';
 import { BandcardComponent } from './bandcard/bandcard.component';
 import { VenuecardComponent } from './venuecard/venuecard.component';
 import {  FormsModule } from '@angular/forms'; //FormControl,
+import { UserBandListComponent } from './user-band-list/user-band-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {  FormsModule } from '@angular/forms'; //FormControl,
     FrontloginpageComponent,
     SearchviewComponent,
     BandcardComponent,
-    VenuecardComponent
+    VenuecardComponent,
+    UserBandListComponent
   ],
   imports: [
     BrowserModule,
