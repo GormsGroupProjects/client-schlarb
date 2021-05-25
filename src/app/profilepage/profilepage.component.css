@@ -1,19 +1,7 @@
 p.pos_right {
   position: relative;
-  float:right;
+  float: right;
 }
-
-button {
-  background-color: #2E4770;
-  border: none;
-  color: #ECC6A2;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
 
 /* Create two equal columns that floats next to each other */
 .column {
@@ -28,4 +16,8 @@ button {
   content: "";
   display: table;
   clear: both;
+}
+
+.container {
+  background-color: #200d3a;
 }
