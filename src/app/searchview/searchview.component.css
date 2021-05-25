@@ -1,9 +1,14 @@
 .maindiv{
     padding: 2em ;
+    /* background-color: red; */
+    /* min-height: 100vh; */
 }
 .search-bar{
     max-width: 600px;
     /* how big should searchbar be?
         may need to do some break points
     */
+}
+body{
+    
 }
