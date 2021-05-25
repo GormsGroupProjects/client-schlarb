@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Band } from '../band';
 import { Venue } from '../venue';
 import {NewsearchService} from '../newsearch.service';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-searchview',
@@ -12,19 +14,19 @@ export class SearchviewComponent implements OnInit {
   bands:Band[] = [];
   venues:Venue[] = [];
   query:string = "";
-  selectedOption:string;
+  selectedOption = new FormControl('');
 
   searchAPI(){  //this is run on click of search button
     //need to learn advanced (reactive?) forms before can implement properly
     console.log("search Query: "+this.query);
-    console.log("selected Option: : "+this.selectedOption);
-    this.getBands();
-// need to remove the aboe line - once it works
-      if (this.selectedOption=="band"){
+    console.log("selected Option: : "+this.selectedOption.value);
+
+      if (this.selectedOption.value=="band"){
         console.log("getting bands");
-        this.getBands();
+        this.getBands(); //there can be only 1 highlander (delete me)
+        this.getBandsFromApi();
       }
-      else if (this.selectedOption == "vanue"){
+      else if (this.selectedOption.value == "vanue"){
         console.log("getting bands");
       }
       else{
@@ -34,7 +36,9 @@ export class SearchviewComponent implements OnInit {
   }
 
 
-
+getBandsFromApi(){
+  this.searchService.getBandsFromApi(this.query);
+}
   getBands():void{
     this.searchService.getBands()
       .subscribe(bands => this.bands = bands);
