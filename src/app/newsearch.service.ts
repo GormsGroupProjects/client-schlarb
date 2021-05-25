@@ -31,6 +31,10 @@ export class NewsearchService {
     );
     return bands;
     //this will need to be replaces with real api data
+    
+  }
+  getBandsFromApi(query){
+    console.log("api: "+ query);
   }
   getVenues(): Observable <Venue[]> {
     const venues = of(

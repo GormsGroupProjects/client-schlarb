@@ -20,11 +20,11 @@ export class SearchviewComponent implements OnInit {
     //need to learn advanced (reactive?) forms before can implement properly
     console.log("search Query: "+this.query);
     console.log("selected Option: : "+this.selectedOption.value);
-    this.getBands();
-// need to remove the aboe line - once it works
+
       if (this.selectedOption.value=="band"){
         console.log("getting bands");
-        this.getBands();
+        this.getBands(); //there can be only 1 highlander (delete me)
+        this.getBandsFromApi();
       }
       else if (this.selectedOption.value == "vanue"){
         console.log("getting bands");
@@ -36,7 +36,9 @@ export class SearchviewComponent implements OnInit {
   }
 
 
-
+getBandsFromApi(){
+  this.searchService.getBandsFromApi(this.query);
+}
   getBands():void{
     this.searchService.getBands()
       .subscribe(bands => this.bands = bands);
