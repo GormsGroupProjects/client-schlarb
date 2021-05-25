@@ -1,6 +1,8 @@
 <div class="maindiv">
     <div class="input-group mb-3">
-        <select class="-select" id="inputGroupSelect01">
+        <select class="-select" id="inputGroupSelect01"
+        [formControl]="selectedOption"
+        >
             <option selected>Choose...</option>
             <option value="venue">Venue</option>
             <option value="band">band</option>
