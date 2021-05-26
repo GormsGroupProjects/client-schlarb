@@ -11,6 +11,7 @@ import { BandcardComponent } from './bandcard/bandcard.component';
 import { VenuecardComponent } from './venuecard/venuecard.component';
 import { UserBandListComponent } from './user-band-list/user-band-list.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ProfilepageComponent } from './profilepage/profilepage.component';
     VenuecardComponent,
     UserBandListComponent,
     ProfilepageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
