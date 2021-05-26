@@ -1,0 +1,38 @@
+<div class="container">
+    <h3><u>List Of Players</u></h3>
+    <table class="table table-light table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Url</th>
+                <th>Image</th>
+                <th>Facebook</th>
+                <th>MBID</th>
+                <th>Tracker Count</th>
+                <th>Upcoming Events</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let band of bands">
+                <td>{{band.id}}</td>
+                <td>{{band.lineup}}</td>
+                <td>{{band.url}}</td>
+                <td>{{band.image_url}}</td>
+                <td>{{band.facebook_page_url}}</td>
+                <td>{{band.mbid}}</td>
+                <td>{{band.tracker_count}}</td>
+                <td>{{band.upcoming_event_count}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- id?: number;
+name: string;
+url: string;
+image_url: string;
+facebook_page_url: string;
+mbid: string; //?
+tracker_count: number; //?
+upcoming_event_count: number; -->
