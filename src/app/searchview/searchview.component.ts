@@ -26,18 +26,17 @@ export class SearchviewComponent implements OnInit {
         this.getBands(); //there can be only 1 highlander (delete me)
         this.getBandsFromApi();
       }
-      else if (this.selectedOption.value == "vanue"){
+      else if (this.selectedOption.value == "venue"){
         console.log("getting bands");
       }
       else{
         console.log("genre, data and error not implemented")
       }
-
   }
 
 
 getBandsFromApi(){
-  this.searchService.getBandsFromApi(this.query);
+  console.log(this.searchService.getBandsFromApi(this.query));
 }
   getBands():void{
     this.searchService.getBands()
