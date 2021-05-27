@@ -14,17 +14,20 @@ import { catchError, retry } from 'rxjs/operators';
 export class NewsearchService {
 
   private urlCrud: string;
-  private urlSearch: string;
+  // private urlSearch: string;
   constructor(private http: HttpClient) {
-    this.urlCrud = "https://rest.bandsintown.com/artists/BillyJoel/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae"
+    this.urlCrud = "https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae"
     
   }
-
+  // ${artist_name}
   public getAllBands(): Observable<Band[]> {
     return this.http.get<Band[]>(this.urlCrud);
   }
 
- 
+  // getBandsFromApi(query) {
+  //   console.log("api: " + query);
+  //   return this.http.get<Band[]>(`https://rest.bandsintown.com/artists/${artist_name}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a); //replace this with the real api 
+  // }
 
 }
 
@@ -85,12 +88,12 @@ export class NewsearchService {
 //     return bands;
 //     //this will need to be replaces with real api data
 //   }
-//   getBandsFromApi(query) {
-//     console.log("api: " + query);
-//     return this.httpClient.get<Band>("https://pokeapi.co/api/v2/pokemon/123"); //replace this with the real api 
+  // getBandsFromApi(query) {
+  //   console.log("api: " + query);
+  //   return this.httpClient.get<Band>("https://pokeapi.co/api/v2/pokemon/123"); //replace this with the real api 
 
 
-//   }
+  // }
 //   getVenues(): Observable<Venue[]> {
 //     const venues = of(
 //       [{
