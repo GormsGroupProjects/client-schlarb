@@ -5,21 +5,18 @@
         <img [src]="band.image_url" alt="no image available" class="band-pic">
         <!-- {{ around the src above!}} -->
     </div>
-    <div class=col-3>
+    <div class=col-6>
         display name
         <span class="bandcard-span">Artist: {{band.name}}</span>
     </div>
-    <div class=col-3>
-        <span class="bandcard-span">Artist URL: <a href="{{band.url}}">{{band.image_url}}</a></span>
-    </div>
-    <div class=col-3>
-        <span class="bandcard-span">Artist URL: <a href="{{band.image_url}}">{{band.image_url}}</a></span>
+    <div class=col-6>
+        <p class="bandcard-span">Artist URL: <a href="{{band.url}}">{{band.image_url}}</a></p>
+        <p class="bandcard-span">Artist URL: <a href="{{band.image_url}}">{{band.image_url}}</a></p>
+        <p class="bandcard-span">Number of upcoming Events: {{band.upcoming_event_count}}</p>
    
+        <button>Add Band to Favorites</button>
     </div>
-    <div class=col-3>
-        <span class="bandcard-span">Number of upcoming Events: {{band.upcoming_event_count}}</span>
-   
-    </div>
+    
 
 <!-- maybe display span only if info exists?... extra effort! -->
 </div>
