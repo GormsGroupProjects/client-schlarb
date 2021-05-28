@@ -16,7 +16,7 @@ export class NewsearchService {
   private urlCrud: string;
   // private urlSearch: string;
   constructor(private http: HttpClient) {
-    this.urlCrud = "https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae"
+    this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
     
   }
   // ${artist_name}
@@ -24,10 +24,19 @@ export class NewsearchService {
     return this.http.get<Band[]>(this.urlCrud);
   }
 
-  // getBandsFromApi(query) {
+  getBandsFromApi(): Observable<Band[]> {
+    // console.log("api: " + );
+    return this.http.get<Band[]>(this.urlCrud); 
+    //replace this with the real api 
+  }
+
+
+  // getBandsFromApi(query): Observable<Band[]> {
   //   console.log("api: " + query);
-  //   return this.http.get<Band[]>(`https://rest.bandsintown.com/artists/${artist_name}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a); //replace this with the real api 
+  //   return this.http.get<Band[]>("https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a"); 
+  //   //replace this with the real api 
   // }
+  //We want this to work and implement the string literal of the the query
 
 }
 
@@ -113,3 +122,4 @@ export class NewsearchService {
 //   // constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
 // }
 
+    

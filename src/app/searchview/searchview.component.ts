@@ -32,25 +32,33 @@ export class SearchviewComponent  {
   //     else{
   //       console.log("genre, data and error not implemented")
   //     }
+  }
+
+
+
+  // getBands():void{
+  //   this.searchService.getBands()
+  //     .subscribe(bands => this.bands = bands);
   // }
-
-
-// getBandsFromApi(){
-//   console.log(this.searchService.getBandsFromApi(this.query));
-// }
-//   getBands():void{
-//     this.searchService.getBands()
-//       .subscribe(bands => this.bands = bands);
-//   }
 //do for venues!!
 
 
   //reconfig with a service
-  // constructor(private searchService: NewsearchService ) { }
+  constructor(private searchService: NewsearchService ) { }
 
-  // ngOnInit(): void {
+  ngOnInit(): void {
+    this.searchService.getBandsFromApi().subscribe(res =>{
+      this.bands=res;
+      
+    })
 
-  // }
+  }
 
 }
-}
+// ngOnInit(): void {
+//   this.service.getAllBands().subscribe(res => {
+//     this.bands = res;
+//   })
+// }
+
+// console.log(this.searchService.getBandsFromApi(this.query));
