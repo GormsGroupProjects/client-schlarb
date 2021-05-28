@@ -1,18 +1,17 @@
+<div class="container">
 <div class="card">
   <div class="card-header">
     <h1 class="title">{{ title }}</h1>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Sub-title</h5>
-    <p class="card-text">Some very important information about this app.</p>
+    <!-- <h5 class="card-title">Sub-title</h5> -->
+    <p class="card-text">{{ appDescription }}</p>
   </div>
   <br />
   <br />
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >User Name</span
-      >
+      <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
     </div>
     <input
       type="text"
@@ -23,9 +22,7 @@
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >Password</span
-      >
+      <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
     </div>
     <input
       type="text"
@@ -35,15 +32,16 @@
     />
   </div>
   <div>
-    <button type="button" class="btn btn-outline-primary">
-      <a href="/profile"> Sign In </a>
+    <button type="button" class="btn btn-primary">
+      <!-- <a href="/profile"> Sign In </a> -->
+      Sign in
     </button>
     <!-- <a href="/profile">Profile</a> -->
   </div>
   <br />
   <br />
   <br />
-  <a href="#" class="card-link">Another link</a>
+  <a href="#" class="card-link">New user?</a>
 </div>
 <!-- <nav>
   <ul>
@@ -53,3 +51,4 @@
     
   </ul>
 </nav> -->
+</div>
