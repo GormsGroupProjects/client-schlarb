@@ -7,13 +7,16 @@ import { NewsearchService } from '../newsearch.service';
   styleUrls: ['./bandcard.component.css']
 })
 export class BandcardComponent implements OnInit {
-  @Input() bands:Band[];
+  @Input() band;
   constructor(private service: NewsearchService) { }
 
   ngOnInit(): void {
-    this.service.getAllBands().subscribe(res => {
-      this.bands = res;
-    })
-  }//added this to band card and it also exists in serchview....here it allows bandcard to work
+  }
+  ngOnChange(): void{
+
+  }
+
+//will need to add backend api here so we can directly save band to the backend... 
+//but how to deal with user credentials?
 
 }

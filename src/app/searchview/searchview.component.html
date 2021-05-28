@@ -1,8 +1,6 @@
 <div class="maindiv">
     <div class="input-group mb-3">
-        <select class="-select" id="inputGroupSelect01"
-        [formControl]="selectedOption"
-        >
+        <select class="-select" id="inputGroupSelect01" [formControl]="selectedOption">
             <option selected>Choose...</option>
             <option value="venue">Venue</option>
             <option value="band">band</option>
@@ -11,21 +9,17 @@
             <!--  -->
         </select>
         <input type="text" class="form-control search-bar" aria-label="Text input with select dropdown"
-        [(ngModel)]="query"
-        >
+            [(ngModel)]="query">
         <!-- bind the input to some soervice? ... -->
         <button (click)="searchAPI()">Search</button>
     </div>
 
-<div class="container" 
-*ngFor="let band of bands"
->
-<!-- should only run if bands exist -->
-<app-bandcard [band]="band"></app-bandcard>
-    <!-- display each search result in special containers -->
-</div>
+    <div class="container" *ngIf="band">
+        <!-- should only run if bands exist -->
+        <app-bandcard [band]="band"></app-bandcard>
+        <!-- display each search result in special containers -->
+    </div>
 
-test
 </div>
 <!-- https://stackoverflow.com/questions/33700266/how-can-i-get-new-selection-in-select-in-angular-2 -->
 <!-- selectionChange event may be used for -->
