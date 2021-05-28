@@ -13,6 +13,8 @@ import { VenuecardComponent } from './venuecard/venuecard.component';
 import { UserBandListComponent } from './user-band-list/user-band-list.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NewsearchService } from './newsearch.service';
+import { ApibandlistComponent } from './apibandlist/apibandlist.component';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     UserBandListComponent,
     ProfilepageComponent,
     NavbarComponent,
+    ApibandlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     // FormControl //not sure if this is right one, need ot learn about it!
     //reactiveFormsModule...?
   ],
-  providers: [],
+  providers: [NewsearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
