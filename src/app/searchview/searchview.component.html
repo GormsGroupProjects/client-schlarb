@@ -20,6 +20,7 @@
 <div class="container" 
 *ngFor="let band of bands"
 >
+{{band.name}}
 <!-- should only run if bands exist -->
 <app-bandcard [band]="band"></app-bandcard>
     <!-- display each search result in special containers -->

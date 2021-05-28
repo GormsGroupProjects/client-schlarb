@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError  } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { Band } from './band';
 import { Venue } from './venue';
 
@@ -16,20 +16,23 @@ export class NewsearchService {
   private urlCrud: string;
   // private urlSearch: string;
   constructor(private http: HttpClient) {
-    this.urlCrud = "https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae"
-    
+    this.urlCrud = "https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
+
   }
   // ${artist_name}
   public getAllBands(): Observable<Band[]> {
     return this.http.get<Band[]>(this.urlCrud);
   }
 
-  // getBandsFromApi(query) {
-  //   console.log("api: " + query);
-  //   return this.http.get<Band[]>(`https://rest.bandsintown.com/artists/${artist_name}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a); //replace this with the real api 
-  // }
-
+  public getBandsFromApi(): Observable<Band[]> {
+    // console.log("api: " + query);
+    return this.http.get<Band[]>(this.urlCrud); //replace this with the real api 
+    //https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a
+    //https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae
+  }
 }
+
+
 
 // (method) HttpClient.get(url: string, options: {
 //   headers?: HttpHeaders | {
