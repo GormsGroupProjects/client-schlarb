@@ -2,19 +2,21 @@
     <div class=col-3>
         <!-- display image -->
         <!-- <span class="bandcard-span">{{band.name}}</span> -->
-        <img src="" alt="no image available">
+        <!-- <img src="band.url" alt="no image available"> -->
     </div>
     <div class=col-3>
-        <!-- display name -->
-        <span class="bandcard-span">Artist: {{band.name}}</span>
+        display name
+        <!-- <span *i class="bandcard-span">Artist: {{band.name}}</span> -->
+        <img *ngIf="bands" [src]="bands[0].artist.thumb_url" width = "50">   <!--using *ngIf to provide api info-->
     </div>
+     <div class=col-3>
+        display album... 
+          <p *ngIf="bands">{{bands[0].lineup}}</p>
+    </div> 
     <div class=col-3>
-        <!-- display album... -->
-        <span class="bandcard-span">Album: {{band.album}}</span>
-    </div>
-    <div class=col-3>
-        <!-- display genre -->
-        <span class="bandcard-span">{{band.genre}}</span>
+        display location
+        <p *ngIf="bands">{{bands[0].venue.name}}</p>
+         <!-- <span class="bandcard-span">{{band.upcoming_event_count}}</span> -->
     </div>
 
 <!-- maybe display span only if info exists?... extra effort! -->
