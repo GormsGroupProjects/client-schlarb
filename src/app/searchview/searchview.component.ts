@@ -44,13 +44,10 @@ export class SearchviewComponent {
   // }
   //do for venues!!
   getBandFromApi(): void {
-    //not callign async...
-    // console.log("bands in component");
-    // console.log(this.bands);
-    this.searchService.getBandFromApi("poop") //pass in query to api
+    this.searchService.getBandFromApi(this.query) //pass in query to api
       .subscribe(res => {
         this.band = res
-        console.log(res.name);
+        console.log(res);
       });
 
     console.log("got band from api");

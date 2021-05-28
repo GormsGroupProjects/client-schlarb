@@ -15,7 +15,6 @@
     </div>
 
     <div class="container" *ngIf="band">
-        {{band.name}}
         <!-- should only run if bands exist -->
         <app-bandcard [band]="band"></app-bandcard>
         <!-- display each search result in special containers -->

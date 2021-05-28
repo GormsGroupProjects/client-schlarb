@@ -27,7 +27,7 @@ export class NewsearchService {
 
   public getBandFromApi(query): Observable<Band> {
     console.log("api: " + query);
-    return this.http.get<Band>(`https://rest.bandsintown.com/artists/Disturbed/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae`); //replace this with the real api 
+    return this.http.get<Band>(`https://rest.bandsintown.com/artists/${query}/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae`); //replace this with the real api 
     //https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a
     //https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae
   }
