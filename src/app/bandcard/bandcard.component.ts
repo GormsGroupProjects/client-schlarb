@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {Band} from '../band';
+import { NewsearchService } from '../newsearch.service';
 @Component({
   selector: 'app-bandcard',
   templateUrl: './bandcard.component.html',
   styleUrls: ['./bandcard.component.css']
 })
 export class BandcardComponent implements OnInit {
-  @Input() band?:Band;
-  constructor() { }
+  @Input() band;
+  constructor(private service: NewsearchService) { }
 
   ngOnInit(): void {
   }
