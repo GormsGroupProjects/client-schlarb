@@ -19,6 +19,7 @@
             <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
           </div>
           <input
+            [(ngModel)]="username"
             type="text"
             class="form-control"
             aria-label="Default"
@@ -31,6 +32,7 @@
             <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
           </div>
           <input
+            [(ngModel)]="password"
             type="text"
             class="form-control"
             aria-label="Default"
@@ -39,11 +41,11 @@
         </div>
         
         <div>
-          <a href="/profile" >
+          <!-- <a href="/profile" > -->
             <button type="button" class="btn btn-primary" (click)="login()">
               Sign In
             </button>
-          </a>
+          <!-- </a> -->
           <!-- <a href="/profile">Profile</a> -->
         </div>
     
