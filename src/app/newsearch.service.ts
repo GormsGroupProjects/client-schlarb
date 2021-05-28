@@ -20,13 +20,14 @@ export class NewsearchService {
 
   }
   // ${artist_name}
-  public getAllBands(): Observable<Band[]> {
+  public getAllBands(): Observable<Band[]> { //gets bands from event
+    // console.log(this.http.get<Band[]>(this.urlCrud));
     return this.http.get<Band[]>(this.urlCrud);
   }
 
-  public getBandsFromApi(): Observable<Band[]> {
-    // console.log("api: " + query);
-    return this.http.get<Band[]>(this.urlCrud); //replace this with the real api 
+  public getBandFromApi(query): Observable<Band> {
+    console.log("api: " + query);
+    return this.http.get<Band>(`https://rest.bandsintown.com/artists/Disturbed/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae`); //replace this with the real api 
     //https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a
     //https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae
   }
