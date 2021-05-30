@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
     <h3><u>List Of Players</u></h3>
     <table class="table table-light table-bordered table-hover">
@@ -11,10 +12,24 @@
                 <th>MBID</th>
                 <th>Tracker Count</th>
                 <th>Upcoming Events</th>
+=======
+<div></div>
+<div class="container">
+    <h3><u>Artist/Band Lookup</u></h3>
+    <img *ngIf="bands" [src]="bands[0].artist.thumb_url" width = "200">
+    <table class="table table-light table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Venue</th>
+                <th>Location</th>
+                <th>Band/Artist Name</th>
+                <th>Time</th>
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let band of bands">
+<<<<<<< HEAD
                 <td>{{band.id}}</td>
                 <td>{{band.lineup}}</td>
                 <td>{{band.url}}</td>
@@ -23,6 +38,12 @@
                 <td>{{band.mbid}}</td>
                 <td>{{band.tracker_count}}</td>
                 <td>{{band.upcoming_event_count}}</td>
+=======
+                <td>{{band.venue.name}}</td>
+                <td>{{band.venue.location}}</td>
+                <td>{{band.lineup}}</td>
+                <td>{{band.datetime}}</td>
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
             </tr>
         </tbody>
     </table>
@@ -35,4 +56,10 @@ image_url: string;
 facebook_page_url: string;
 mbid: string; //?
 tracker_count: number; //?
+<<<<<<< HEAD
 upcoming_event_count: number; -->
+=======
+upcoming_event_count: number; -->
+
+<!-- <td><img src={{band.artist.thumb_url}} width = "200"></td> -->
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89

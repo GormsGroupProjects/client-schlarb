@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Observable, of, throwError  } from 'rxjs';
+=======
+import { Observable, of, throwError } from 'rxjs';
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
 import { Band } from './band';
 import { Venue } from './venue';
 
@@ -14,6 +18,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class NewsearchService {
 
   private urlCrud: string;
+<<<<<<< HEAD
   private urlSearch: string;
   constructor(private http: HttpClient) {
     this.urlCrud = "https://rest.bandsintown.com/artists/BillyJoel/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae"
@@ -40,10 +45,32 @@ export class NewsearchService {
 //   responseType: "arraybuffer";
 //   withCredentials?: boolean;
 // }): Observable<...> (+14 overloads)
+=======
+  // private urlSearch: string;
+  constructor(private http: HttpClient) {
+    this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
+    
+  }
+  // ${artist_name}
+  public getAllBands(): Observable<Band[]> { //gets bands from event
+    // console.log(this.http.get<Band[]>(this.urlCrud));
+    return this.http.get<Band[]>(this.urlCrud);
+  }
+
+  public getBandFromApi(query): Observable<Band> {
+    console.log("api: " + query);
+    return this.http.get<Band>(`https://rest.bandsintown.com/artists/${query}/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae`); //replace this with the real api 
+    //https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a
+    //https://rest.bandsintown.com/artists/Billy/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae
+  }
+}
+
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -110,3 +137,5 @@ export class NewsearchService {
 //   // constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
 // }
 
+=======
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89

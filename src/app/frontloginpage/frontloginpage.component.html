@@ -1,50 +1,67 @@
-<div class="card">
-  <div class="card-header">
-    <h1 class="title">{{ title }}</h1>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Sub-title</h5>
-    <p class="card-text">Some very important information about this app.</p>
-  </div>
-  <br />
-  <br />
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >User Name</span
-      >
+<div class="container">
+
+  <div class="card">
+    <div class="card-header">
+      <h1 class="title">{{ title }}</h1>
     </div>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Default"
-      aria-describedby="inputGroup-sizing-default"
-    />
-  </div>
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >Password</span
-      >
+
+    <div class="card-body">
+      <!-- <h5 class="card-title">Sub-title</h5> -->
+      <p class="card-text">{{ appDescription }}</p>
     </div>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Default"
-      aria-describedby="inputGroup-sizing-default"
-    />
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
+          </div>
+          <input
+            [(ngModel)]="username"
+            type="text"
+            class="form-control"
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+    
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+          </div>
+          <input
+            [(ngModel)]="password"
+            type="text"
+            class="form-control"
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        
+        <div>
+          <!-- <a href="/profile" > -->
+            <button type="button" class="btn btn-primary" (click)="login()">
+              Sign In
+            </button>
+          <!-- </a> -->
+          <!-- <a href="/profile">Profile</a> -->
+        </div>
+    
+        <div>
+          <a href="#" class="card-link">New user?</a>
+        </div>
+
+      </div>
+      <div class="col"></div>
+    </div>
   </div>
-  <div>
-    <button type="button" class="btn btn-outline-primary">
-      <a href="/profile"> Sign In </a>
-    </button>
-    <!-- <a href="/profile">Profile</a> -->
-  </div>
-  <br />
-  <br />
-  <br />
-  <a href="#" class="card-link">Another link</a>
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
 <div class="container">
   <ul class="nav justify-content-center">
     <li><a routerLink="/apibandlist" routerLinkActive="active">Search Component</a></li>
