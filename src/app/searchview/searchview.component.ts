@@ -10,10 +10,10 @@ import { FormControl } from '@angular/forms';
   templateUrl: './searchview.component.html',
   styleUrls: ['./searchview.component.css']
 })
-export class SearchviewComponent  {
-  bands:Band[] = [];
-  venues:Venue[] = [];
-  query:string = "";
+export class SearchviewComponent {
+  band: Band;
+  venues: Venue[] = [];
+  query: string = "";
   selectedOption = new FormControl('');
 
   searchAPI() {  //this is run on click of search button
@@ -63,5 +63,4 @@ export class SearchviewComponent  {
 
 
 
-}
 }

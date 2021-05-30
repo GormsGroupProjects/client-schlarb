@@ -13,42 +13,32 @@
     <div class="row">
       <div class="col"></div>
       <div class="col">
-        
+
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
           </div>
-          <input
-            [(ngModel)]="username"
-            type="text"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input [(ngModel)]="username" type="text" class="form-control" aria-label="Default"
+            aria-describedby="inputGroup-sizing-default" />
         </div>
-    
+
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
           </div>
-          <input
-            [(ngModel)]="password"
-            type="text"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input [(ngModel)]="password" type="text" class="form-control" aria-label="Default"
+            aria-describedby="inputGroup-sizing-default" />
         </div>
-        
+
         <div>
           <!-- <a href="/profile" > -->
-            <button type="button" class="btn btn-primary" (click)="login()">
-              Sign In
-            </button>
+          <button type="button" class="btn btn-primary" (click)="login()">
+            Sign In
+          </button>
           <!-- </a> -->
           <!-- <a href="/profile">Profile</a> -->
         </div>
-    
+
         <div>
           <a href="#" class="card-link">New user?</a>
         </div>
@@ -57,29 +47,22 @@
       <div class="col"></div>
     </div>
 
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Default"
-      aria-describedby="inputGroup-sizing-default"
-    />
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
   </div>
   <div>
     <button type="button" class="btn btn-outline-primary">
       <a href="/profile"> Sign In </a>
     </button>
   </div>
-  <br/>
-  <br/>
-  <br/>
-  <div class= "signup">
+  <br />
+  <br />
+  <br />
+  <div class="signup">
     <a routerLink="/newuserpage" routerLinkActive="active">Sign Up</a>
   </div>
 </div>
 <div>
-  <ul>
-
-  </div>
+<!-- this is an empty div... -->
 </div>
 <div class="container">
   <ul class="nav justify-content-center">
@@ -88,6 +71,7 @@
     <li><a routerLink="/newuserpage" routerLinkActive="active">Sign Up</a></li>
   </ul>
 </div>
+
 
 <!-- <nav>
   <ul>

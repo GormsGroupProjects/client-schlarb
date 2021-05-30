@@ -14,6 +14,10 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class NewsearchService {
 
+  private artistUrl: string = "https://rest.bandsintown.com/artists/"; //url for artist search
+  private ak:string = "/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";  //put on end of api requests
+    
+    
   private urlCrud: string;
    private urlAdd: string;
   constructor(private http: HttpClient) {
@@ -31,9 +35,9 @@ export class NewsearchService {
     
   }
 
-  getBandsFromApi(): Observable<Band[]> {
+  getBandFromApi(query): Observable<Band> {
     // console.log("api: " + );
-    return this.http.get<Band[]>(this.urlCrud); 
+    return this.http.get<Band>(this.artistUrl+query+this.ak); 
     //replace this with the real api 
   }
 
