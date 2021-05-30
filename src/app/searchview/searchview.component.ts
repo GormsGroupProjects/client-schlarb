@@ -20,7 +20,8 @@ export class SearchviewComponent {
     //need to learn advanced (reactive?) forms before can implement properly
     console.log("search Query: " + this.query);
     console.log("selected Option: : " + this.selectedOption.value);
-
+    //validation
+    // if (this.query.length)
     if (this.selectedOption.value == "band") {
       console.log("getting band");
       this.getBandFromApi();

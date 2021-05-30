@@ -14,7 +14,7 @@
         <p class="bandcard-span">Artist URL: <a href="{{band.image_url}}">{{band.image_url}}</a></p>
         <p class="bandcard-span">Number of upcoming Events: {{band.upcoming_event_count}}</p>
    
-        <button>Add Band to Favorites</button>
+        <button (click)="saveBand()">Add Band to Favorites</button>
     </div>
     
 

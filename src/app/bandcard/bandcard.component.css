@@ -5,6 +5,7 @@
     /* background-color: aquamarine; */
     /* replace with correct colors */
     margin: 0px 0px 10px 0px;
+    word-wrap: break-word;
 }
 .band-pic{
     width: 300px;
