@@ -22,6 +22,9 @@ export class NewsearchService {
   }
   // ${artist_name}
   
+
+
+
   public getAllBands(): Observable<Band[]> {
     console.log(this.urlCrud) //trying something
     return this.http.get<Band[]>(this.urlCrud);
@@ -106,12 +109,12 @@ export class NewsearchService {
 //     return bands;
 //     //this will need to be replaces with real api data
 //   }
-  // getBandsFromApi(query) {
-  //   console.log("api: " + query);
-  //   return this.httpClient.get<Band>("https://pokeapi.co/api/v2/pokemon/123"); //replace this with the real api 
+//   getBandsFromApi(query) {
+//     console.log("api: " + query);
+//     return this.httpClient.get<Band>("https://pokeapi.co/api/v2/pokemon/123"); //replace this with the real api 
 
 
-  // }
+//   }
 //   getVenues(): Observable<Venue[]> {
 //     const venues = of(
 //       [{
@@ -131,4 +134,3 @@ export class NewsearchService {
 //   // constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
 // }
 
-    
