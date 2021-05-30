@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Band } from '../band';
 import { NewsearchService } from '../newsearch.service';

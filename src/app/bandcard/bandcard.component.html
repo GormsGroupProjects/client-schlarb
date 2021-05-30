@@ -2,6 +2,7 @@
     <div class=col-3>
         <!-- display image -->
         <!-- <span class="bandcard-span">{{band.name}}</span> -->
+
         <img [src]="band.image_url" alt="no image available" class="band-pic">
         <!-- {{ around the src above!}} -->
     </div>
@@ -13,12 +14,13 @@
         <p class="bandcard-span">Artist URL: <a href="{{band.url}}">{{band.image_url}}</a></p>
         <p class="bandcard-span">Artist URL: <a href="{{band.image_url}}">{{band.image_url}}</a></p>
         <p class="bandcard-span">Number of upcoming Events: {{band.upcoming_event_count}}</p>
-   
-        <button (click)="saveBand()">Add Band to Favorites</button>
-    </div>
-    
 
-<!-- maybe display span only if info exists?... extra effort! -->
+        <button (click)="saveBand()">Add Band to Favorites</button>
+
+    </div>
+
+
+    <!-- maybe display span only if info exists?... extra effort! -->
 </div>
 
 <!-- now I just need to rebuild component so it looks good - multi row
