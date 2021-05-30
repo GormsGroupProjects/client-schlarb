@@ -15,6 +15,7 @@ import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsearchService } from './newsearch.service';
 import { ApibandlistComponent } from './apibandlist/apibandlist.component';
+import { NewuserSignupComponent } from './newuser-signup/newuser-signup.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ApibandlistComponent } from './apibandlist/apibandlist.component';
     ProfilepageComponent,
     NavbarComponent,
     ApibandlistComponent,
+    NewuserSignupComponent,
   ],
   imports: [
     BrowserModule,

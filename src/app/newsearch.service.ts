@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError  } from 'rxjs';
 import { Band } from './band';
 import { Venue } from './venue';
+import { User } from './user'
 
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpEvent } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
-// import { Configuration }                                     from './configuration';
+
 
 
 @Injectable({
@@ -14,14 +15,17 @@ import { catchError, retry } from 'rxjs/operators';
 export class NewsearchService {
 
   private urlCrud: string;
-  // private urlSearch: string;
+   private urlAdd: string;
   constructor(private http: HttpClient) {
     this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
-    
+    this.urlAdd = "http://localhost:7000/user/"
   }
   // ${artist_name}
+  
   public getAllBands(): Observable<Band[]> {
+    console.log(this.urlCrud) //trying something
     return this.http.get<Band[]>(this.urlCrud);
+    
   }
 
   getBandsFromApi(): Observable<Band[]> {
@@ -30,7 +34,12 @@ export class NewsearchService {
     //replace this with the real api 
   }
 
+  //used to add new user to database
+  public addNewUser(user:User): Observable<User> {
+    return this.http.post<User>(this.urlAdd, user);
 
+  }
+}
   // getBandsFromApi(query): Observable<Band[]> {
   //   console.log("api: " + query);
   //   return this.http.get<Band[]>("https://rest.bandsintown.com/artists/${query}/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8a"); 
@@ -38,7 +47,7 @@ export class NewsearchService {
   // }
   //We want this to work and implement the string literal of the the query
 
-}
+
 
 // (method) HttpClient.get(url: string, options: {
 //   headers?: HttpHeaders | {
