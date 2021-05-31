@@ -16,12 +16,13 @@ export class FrontloginpageComponent implements OnInit {
   username: string;
   password: string;
 
+
   constructor(private userService: UserService) { }
 
   login(): void {
-    this.user.username = this.username;
-    this.user.password = this.password;
-    console.log(this.user.username, this.user.password)
+    // this.user.username = this.username;
+    // this.user.password = this.password;
+    console.log(this.username, this.password)
     // this.userService.login(this.user);
   }
 

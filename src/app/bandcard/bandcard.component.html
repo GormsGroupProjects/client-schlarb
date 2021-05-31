@@ -1,15 +1,17 @@
-<div class="row bandcard">
-    <div class=col-3>
+<div class="row bandcard-header">
+    <div class=col-6>
+        <h3 class="bandcard-span">Artist: {{band.name}}</h3>
+    </div>
+</div>
+<div class="row bandcard-body">
+    <div class=col-6>
         <!-- display image -->
         <!-- <span class="bandcard-span">{{band.name}}</span> -->
 
         <img [src]="band.image_url" alt="no image available" class="band-pic">
         <!-- {{ around the src above!}} -->
     </div>
-    <div class=col-6>
-        display name
-        <h3 class="bandcard-span">Artist: {{band.name}}</h3>
-    </div>
+
     <div class=col-6>
         <p class="bandcard-span">Artist URL: <a href="{{band.url}}">{{band.image_url}}</a></p>
         <p class="bandcard-span">Artist URL: <a href="{{band.image_url}}">{{band.image_url}}</a></p>

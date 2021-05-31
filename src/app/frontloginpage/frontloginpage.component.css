@@ -1,6 +1,10 @@
 .title{
     text-align: center;
 }
+.bottom-buffer{
+    padding-bottom: 35px;
+    /* provides space below bottom of component */
+}
 /* .input-group{
     width:40%;
     margin-left: 25%;

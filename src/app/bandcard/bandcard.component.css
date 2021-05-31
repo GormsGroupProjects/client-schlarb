@@ -1,6 +1,15 @@
-.bandcard{
+.bandcard-header{
     border: solid 1px #2E4770;
     background-color: #CE5E82;
+    padding: 3px;
+    /* background-color: aquamarine; */
+    /* replace with correct colors */
+    margin: 0px 0px 10px 0px;
+    word-wrap: break-word;
+}
+.bandcard-header{
+    background-color: #2E4770;
+    /* background-color: #CE5E82; */
     padding: 3px;
     /* background-color: aquamarine; */
     /* replace with correct colors */
