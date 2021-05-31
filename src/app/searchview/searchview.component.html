@@ -14,24 +14,12 @@
         <button (click)="searchAPI()">Search</button>
     </div>
 
-<<<<<<< HEAD
-<div class="container" 
-*ngFor="let band of bands"
->
-<!-- should only run if bands exist -->
-<app-bandcard [band]="band"></app-bandcard>
-    <!-- display each search result in special containers -->
-</div>
-
-test
-=======
     <div class="container" *ngIf="band">
         <!-- should only run if bands exist -->
         <app-bandcard [band]="band"></app-bandcard>
         <!-- display each search result in special containers -->
     </div>
 
->>>>>>> 6e584660f980bbeaab742ae34e984c15585eae89
 </div>
 <!-- https://stackoverflow.com/questions/33700266/how-can-i-get-new-selection-in-select-in-angular-2 -->
 <!-- selectionChange event may be used for -->

@@ -8,7 +8,14 @@ import { NewsearchService } from '../newsearch.service';
 })
 export class BandcardComponent implements OnInit {
   @Input() band;
-  constructor(private service: NewsearchService) { }
+  constructor(private service: NewsearchService) { }//do I need this service in here?
+  saveBand(): void{
+    console.log("attempting to save band");
+    //needs to call a service and recieve some sort of feedback...
+    //let user know if band is already saved...
+    //wouldnt hurt DB if the 
+  }
+
 
   ngOnInit(): void {
   }
