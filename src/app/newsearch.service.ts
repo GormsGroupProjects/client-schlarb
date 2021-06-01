@@ -6,7 +6,7 @@ import { User } from './user'
 
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpEvent } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
-
+import { Router, ActivatedRoute} from '@angular/router';
 
 
 @Injectable({
@@ -24,7 +24,7 @@ export class NewsearchService {
 
   private urlCrud: string;
   private urlAdd: string;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private activatedRoute:ActivatedRoute, public router: Router) {
     this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
     this.urlAdd = "http://localhost:7000/user/"
   }
@@ -73,12 +73,20 @@ export class NewsearchService {
     console.log(user);
     this.http.post<User>(this.loginUrl, user)
       .subscribe(res => {
-        console.log(res.username);
-        console.log(res.password);
-        console.log(res.numArtists); //should be artistList length
-        sessionStorage.setItem('username', res.username);
-        sessionStorage.setItem('password', res.password);
-        sessionStorage.setItem('numArtists', res.numArtists.toString());
+        if (res.username){
+
+          console.log(res.username);
+          console.log(res.password);
+
+          sessionStorage.setItem('username', res.username);
+          sessionStorage.setItem('password', res.password);
+          if (res.numArtists) {
+            console.log(res.numArtists); //should be artistList length
+            sessionStorage.setItem('numArtists', res.numArtists.toString());
+          }
+          this.router.navigate(['profile']);
+        }
+        
 
       });
 
@@ -90,9 +98,11 @@ export class NewsearchService {
   public getUserInfo(){
     let pw:string = sessionStorage.getItem('password');
     let un:string = sessionStorage.getItem('username');
+    let numA =  Number(sessionStorage.getItem('numArtists'));
     let user:User = new User();
     user.password = pw;
     user.username = un;
+    user.numArtists = numA;
     //missing lots of details... not needed for now
 
     return user;
