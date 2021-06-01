@@ -6,7 +6,7 @@ import { User } from './user'
 
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpEvent } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
-import { Router, ActivatedRoute} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Injectable({
@@ -24,7 +24,7 @@ export class NewsearchService {
 
   private urlCrud: string;
   private urlAdd: string;
-  constructor(private http: HttpClient, private activatedRoute:ActivatedRoute, public router: Router) {
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, public router: Router) {
     this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
     this.urlAdd = "http://localhost:7000/user/"
   }
@@ -56,7 +56,7 @@ export class NewsearchService {
         console.log(res.password);
         sessionStorage.setItem('username', res.username);
         sessionStorage.setItem('password', res.password);
-        
+
       });
 
 
@@ -73,20 +73,27 @@ export class NewsearchService {
     console.log(user);
     this.http.post<User>(this.loginUrl, user)
       .subscribe(res => {
-        if (res.username){
-
-          console.log(res.username);
-          console.log(res.password);
+        if (res.username) {
+          //first clear sessionstorage
+          sessionStorage.clear(); //this should remove old saved artist
+          console.log(res);
+          console.log(res.artistList);
 
           sessionStorage.setItem('username', res.username);
           sessionStorage.setItem('password', res.password);
           if (res.numArtists) {
+            console.log("bands exist");
             console.log(res.numArtists); //should be artistList length
             sessionStorage.setItem('numArtists', res.numArtists.toString());
+            for (let i = 0; i < res.numArtists; i++) {
+              sessionStorage.setItem('artist' + i, res.artistList[i].name);
+              //this only loads name, that could be problematic
+            }
+
           }
           this.router.navigate(['profile']);
         }
-        
+
 
       });
 
@@ -95,14 +102,24 @@ export class NewsearchService {
     //return the response!
     // return user;
   }
-  public getUserInfo(){
-    let pw:string = sessionStorage.getItem('password');
-    let un:string = sessionStorage.getItem('username');
-    let numA =  Number(sessionStorage.getItem('numArtists'));
-    let user:User = new User();
+  public getUserInfo() {
+    let pw: string = sessionStorage.getItem('password');
+    let un: string = sessionStorage.getItem('username');
+    let numA = Number(sessionStorage.getItem('numArtists'));
+    let user: User = new User();
     user.password = pw;
     user.username = un;
     user.numArtists = numA;
+    if (numA > 0) {
+      console.log(user.numArtists);
+      for (let i = 0; i < user.numArtists; i++) {
+        console.log(sessionStorage.getItem('artist' + i));
+        console.log(user.artistList);
+        user.artistList[i].name = sessionStorage.getItem('artist' + i);
+        //this only loads name, that could be problematic
+      }
+    }
+
     //missing lots of details... not needed for now
 
     return user;

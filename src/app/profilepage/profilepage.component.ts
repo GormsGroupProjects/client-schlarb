@@ -11,12 +11,16 @@ import {Band} from '../band';
 })
 export class ProfilepageComponent implements OnInit {
   public bands: Band[];
+  public bandNames: String[] = [];
   public user:User;
   constructor(private newsearchService: NewsearchService) { }
 
   ngOnInit(): void {
     this.user = this.newsearchService.getUserInfo();
-
+    for (let i=0;i<this.user.numArtists;i++){
+    this.bands.push(this.user.artistList[i])
+    }
+    
     //this would also display bands...if they appear
   }
 
