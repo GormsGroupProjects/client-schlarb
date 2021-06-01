@@ -56,7 +56,7 @@ export class NewsearchService {
         console.log(res.password);
         sessionStorage.setItem('username', res.username);
         sessionStorage.setItem('password', res.password);
-
+        this.router.navigate(['profile']);
       });
 
 

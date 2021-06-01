@@ -2,14 +2,16 @@
     padding: 2em ;
     /* background-color: red; */
     /* min-height: 100vh; */
+    background-color: #ECA089;
 }
 .search-bar{
     max-width: 600px;
     /* how big should searchbar be?
         may need to do some break points
     */
+    color: #ECC62A;
 }
-body{
+.input-group{
     
 }
 
@@ -18,3 +20,6 @@ body{
 .form-control{background-color: #292651;}
 
 .maindiv{margin-left: 10%;}
+body{
+    /* background-color: #292651; */
+}

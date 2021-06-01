@@ -7,7 +7,7 @@
     margin: 0px 0px 10px 0px;
     word-wrap: break-word;
 }
-.bandcard-header{
+.bandcard-body{
     background-color: #2E4770;
     /* background-color: #CE5E82; */
     padding: 3px;
@@ -15,10 +15,11 @@
     /* replace with correct colors */
     margin: 0px 0px 10px 0px;
     word-wrap: break-word;
+    color: #ECC62A;;
 }
 .band-pic{
     width: 300px;
 }
-.bandcard-span{
-
+a{
+    color: #ECC62A;
 }
