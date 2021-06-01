@@ -1,3 +1,4 @@
+import {Band} from './band';
 export class User {
 
          username: string;
@@ -5,6 +6,9 @@ export class User {
          firstName: string;
          lastName: string;
          email: string;
+         numArtists:number;
+         artistList:Band[];
+
         
     
     

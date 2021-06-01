@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { NewsearchService } from '../newsearch.service';
 
@@ -10,23 +10,25 @@ import { NewsearchService } from '../newsearch.service';
 export class NewuserSignupComponent implements OnInit {
 
 
-  public user: User;
+  public user: User = new User();
   constructor(private service: NewsearchService) {
-    this.user = new User();
-   }
-
-
-  ngOnInit():void  {  
+    // this.user = new User();
   }
 
-  addNewUser():void {
-    this.service.addNewUser(this.user).subscribe(res => {
-      this.user = new User();
-    })
-  
+
+  ngOnInit(): void {
   }
+
+  addNewUser(): void {
+    this.service.addNewUser(this.user);
+    // .subscribe(res => {
+    // this.user = new User();
+  }
+  // )
+
+  // }
 }
-  
+
     // clickme(){
     //   console.log("Username: "+this.model.username
     //   +"First Name: "+this.model.fname);

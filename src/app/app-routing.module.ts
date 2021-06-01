@@ -15,7 +15,8 @@ const routes: Routes = [
 { path:'search', component: SearchviewComponent},
 { path:'apibandlist', component: ApibandlistComponent},
 { path:'newuserpage', component: NewuserSignupComponent},
-{path: '**', component: FrontloginpageComponent}
+{path: '', component: FrontloginpageComponent}, 
+{path: '**', component: FrontloginpageComponent},
 ]
 
 

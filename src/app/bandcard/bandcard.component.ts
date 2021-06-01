@@ -18,6 +18,7 @@ export class BandcardComponent implements OnInit {
 
 
   ngOnInit(): void {
+    
   }
   ngOnChange(): void{
 
