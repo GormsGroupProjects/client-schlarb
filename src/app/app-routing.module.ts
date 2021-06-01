@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'login', component: FrontloginpageComponent}, 
 {path: 'profile', component: ProfilepageComponent},
 { path:'user-band-list', component:UserBandListComponent},
+{ path:'api-band-list', component:ApibandlistComponent},
 { path:'search', component: SearchviewComponent},
 { path:'apibandlist', component: ApibandlistComponent},
 { path:'newuserpage', component: NewuserSignupComponent},
