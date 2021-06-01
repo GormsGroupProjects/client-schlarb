@@ -7,9 +7,15 @@ import { User } from './user';
 export class UserService {
   private password;
   private username;
+
+
+  
   constructor() { }
 
   login(user: User) {
+
+
+
 
       // console.log(user.username, user.password);
 

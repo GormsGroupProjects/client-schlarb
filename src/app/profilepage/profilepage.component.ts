@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NewsearchService } from '../newsearch.service';
 
 
 @Component({
@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private newsearchService: NewsearchService) { }
 
   ngOnInit(): void {
+
+
   }
 
 }
