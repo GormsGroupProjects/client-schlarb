@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 import { NewsearchService } from '../newsearch.service';
 //ActivatedRoute should aid in passing items thru components...
 // https://angular.io/guide/router
@@ -24,7 +24,7 @@ export class FrontloginpageComponent implements OnInit {
   
  
 
-  constructor(private newsearchService: NewsearchService, private activatedRoute:ActivatedRoute, public router: Router) { }
+  constructor(private newsearchService: NewsearchService) { }
   //need login to be more of a singleton...
   //should route be public?
 
@@ -42,9 +42,6 @@ export class FrontloginpageComponent implements OnInit {
 
 //put into local session storage
 
-
-
-      this.router.navigate(['profile']); 
     }
     else{
       //some sort of warning
@@ -55,9 +52,9 @@ export class FrontloginpageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.username = params['username'];
-    })
+    // this.activatedRoute.queryParams.subscribe(params => {
+    //   this.username = params['username'];
+    // })
 
   }
 }
