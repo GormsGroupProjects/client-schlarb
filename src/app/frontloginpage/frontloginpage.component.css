@@ -1,3 +1,8 @@
+.background-div{
+    margin-top: 2em;
+}
+
+
 .title{
     text-align: center;
 }
@@ -22,7 +27,7 @@
 
 */
 
-.container {background-color: #2E4770;}
+/* .container {background-color: #2E4770;} */
 
 .card-body{background-color: #CE5E82;}
 

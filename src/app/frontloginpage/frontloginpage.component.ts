@@ -24,7 +24,7 @@ export class FrontloginpageComponent implements OnInit {
   
  
 
-  constructor(private newsearchService: NewsearchService) { }
+  constructor(private newsearchService: NewsearchService, private userService:UserService) { }
   //need login to be more of a singleton...
   //should route be public?
 
@@ -37,7 +37,13 @@ export class FrontloginpageComponent implements OnInit {
     //validation
     if (this.password.length >= 4 && this.username.length >=4 ){
       //need more validation
-      this.newsearchService.loginUser(this.user);
+      //fix validations...
+      this.userService.signInOldUser(this.user);
+
+
+
+
+      // this.newsearchService.loginUser(this.user);
       //now deal with responce!!!!!
 
 //put into local session storage
