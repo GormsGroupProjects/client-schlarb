@@ -1,23 +1,29 @@
-p.pos_right {
-  position: relative;
-  float: right;
-}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
+/* gorm */
 .container {
   background-color: #200d3a;
 }
+.header{
+  margin-bottom: 2em;
+  padding: 15px; 
+  padding-bottom: 20px;
+  text-align: center;
+}
+.background-div{
+  /* background-color: #ce5e82; */
+  background-color: #200d3a;
+}
+.main-div{
+  background-color: #ce5e82;
+  text-align: left;
+  /* background-color: #200d3a; */
+}
+.section{
+  /* holds venues and bands... */
+  /* margin not showing up... I thin kwe broke the natural bootstrap margin on rows... */
+
+}
+
+/* why is the page wider than the browser? */

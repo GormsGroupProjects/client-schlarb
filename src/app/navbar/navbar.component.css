@@ -1,5 +1,7 @@
 .pos-f-t{
     color:#CE5E82 ;
+    max-width: 100%;
+    /* this fixed weird width issue... nevermind */
 }
 
 .list-group-item{

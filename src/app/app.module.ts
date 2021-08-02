@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NewsearchService } from './newsearch.service';
 import { ApibandlistComponent } from './apibandlist/apibandlist.component';
 import { NewuserSignupComponent } from './newuser-signup/newuser-signup.component';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { NewuserSignupComponent } from './newuser-signup/newuser-signup.componen
     // FormControl //not sure if this is right one, need ot learn about it!
     //reactiveFormsModule...?
   ],
-  providers: [NewsearchService],
+  // providers: [NewsearchService, UserService], 
+  //shouldnt need these declared here since added to rot in indivual components
   bootstrap: [AppComponent]
 })
 export class AppModule { }

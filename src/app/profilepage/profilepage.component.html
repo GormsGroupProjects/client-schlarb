@@ -1,28 +1,30 @@
-<div class="banner" style="padding: 15px; text-align: center">
-  <div class="banner-content" style="background-color: #200d3a">
-    <h1>Welcome to your Schlarb<span *ngIf="user">, {{user.username}}</span></h1>
-  </div>
-</div>
-
-<div
-  class="container"
->
-  <div class="gallery">
-    <div class="row">
-      <div class="column" style="background-color: #ce5e82">
-        <h2>Venues</h2>
-        <img src />
-      </div>
-      <div>
-        <button class="button" class="p.pos_right">Search and Add</button>
-      </div>
-      <div class="column" style="background-color: #ce5e82">
-        <h2>Band</h2>
-        <!-- <p *ngFor="bandName of bandNames">{{bandName}}</p> -->
-      </div>
-      <div>
-        <button class="button" class="p.pos_right">Search and Add</button>
-      </div>
+<div class="background-div container">
+  <!-- put ackground here -->
+  <div class="header row">
+    <div class="col-12">
+      <h1>Welcome to your Schlarb<span *ngIf="user">, {{user.username}}</span></h1>
+      <!-- center this!? -->
     </div>
+    <div class="row main-div">
+      <!-- <div class="col-6 section">
+        <h2>Venues</h2>
+        
+        
+      </div> -->
+      <div class="col-6 section">
+        <h2>Bands</h2>
+        <button *ngFor="let artist of user.artistList"  (click)="displayArtist(artist)">{{artist.name}}</button>
+        <!-- could be a component... may need a separate update button...-->
+        <br />
+      </div>
+      <!--  -->
+      <div class="col-6 section" *ngIf="selectedArtist">
+        <app-bandcard [band]="selectedArtist"></app-bandcard>
+      </div>
+
+    </div>
+
   </div>
+
+
 </div>
