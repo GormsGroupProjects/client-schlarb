@@ -7,6 +7,7 @@ import { User } from './user'
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpEvent } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -15,8 +16,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class NewsearchService {
   //artist api
   private artistUrl: string = "https://rest.bandsintown.com/artists/"; //url for artist search
-  private ak: string = "/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";  //put on end of api requests
-
+  
   //backend api
   private backendUrl: string = "http://localhost:7000";
   private loginUrl: string = "http://localhost:7000/login";
@@ -25,7 +25,7 @@ export class NewsearchService {
   private urlCrud: string;
   private urlAdd: string;
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, public router: Router) {
-    this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=de960fdbd41b94a4ccd7234c7da4f8ae";
+    this.urlCrud = "https://rest.bandsintown.com/artists/BillieEllish/events/?app_id=" + environment.apiKey;
     this.urlAdd = "http://localhost:7000/user/"
   }
   // ${artist_name}
@@ -42,7 +42,7 @@ export class NewsearchService {
 
   getBandFromApi(query): Observable<Band> {
     // console.log("api: " + );
-    return this.http.get<Band>(this.artistUrl + query + this.ak);
+    return this.http.get<Band>(this.artistUrl + query + "/?app_id=" + environment.apiKey);
     //replace this with the real api 
   }
 
